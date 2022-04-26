@@ -1,0 +1,57 @@
+﻿@model MVC_CRUD.Models.Table
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Kullanıcı Detayları</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyadı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyadı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.KullanıcıID }) |
+    @Html.ActionLink("Listeye Dön", "Index")
+</p>

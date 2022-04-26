@@ -1,0 +1,63 @@
+﻿@model MVC_CRUD.Models.Table
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h3>Kayıt Silme</h3>
+
+<h3>Kaydı Silmek İstiyor musunuz?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyadı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyadı)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-danger" /> |
+            @Html.ActionLink("Listeye Dön", "Index")
+        </div>
+    }
+</div>
